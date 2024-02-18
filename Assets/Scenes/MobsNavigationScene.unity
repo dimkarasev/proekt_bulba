@@ -429,7 +429,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 577825090}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -493,10 +493,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f563d16d8f1894e825e4d3f264a726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   player: {fileID: 1692152828}
 --- !u!4 &577825095
 Transform:
@@ -1794,6 +1790,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019969849}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &2053568584 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3051389935727851363, guid: 5121fd197227dd045bd3e7bd2eb3f597,
+    type: 3}
+  m_PrefabInstance: {fileID: 2072512735}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2072512735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1861,6 +1863,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8828471584154159306, guid: 5121fd197227dd045bd3e7bd2eb3f597,
+        type: 3}
+      propertyPath: bulba
+      value: 
+      objectReference: {fileID: 4449903388213977895, guid: bb47d118ab137fd448055b3efc33cf25,
+        type: 3}
+    - target: {fileID: 8828471584154159306, guid: 5121fd197227dd045bd3e7bd2eb3f597,
+        type: 3}
+      propertyPath: rotationpoint
+      value: 
+      objectReference: {fileID: 2053568584}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5121fd197227dd045bd3e7bd2eb3f597, type: 3}
 --- !u!1 &2124823654

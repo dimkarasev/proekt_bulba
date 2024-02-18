@@ -27,28 +27,28 @@ public class  Player : MonoBehaviour
         
         if (Input.GetKey(KeyCode.W))
         {
-            //gameObject.transform.Translate(Time.deltaTime*_currentSpeed*Vector3.forward);
-            _myPlayer.AddForce(Time.deltaTime*_currentSpeed*(Quaternion.Euler (0, _mouseX, 0)*Vector3.forward));
+            gameObject.transform.Translate(Time.deltaTime*_currentSpeed*Vector3.forward);
+            //_myPlayer.AddForce(Time.deltaTime*_currentSpeed*(Quaternion.Euler (0, _mouseX, 0)*Vector3.forward));
         }
         
         if (Input.GetKey(KeyCode.S))
         {
-            //gameObject.transform.Translate(Time.deltaTime*_currentSpeed*Vector3.back);
-            _myPlayer.AddForce(Time.deltaTime*_currentSpeed*(Quaternion.Euler (0, _mouseX, 0)*Vector3.back));
+            gameObject.transform.Translate(Time.deltaTime*_currentSpeed*Vector3.back);
+            //_myPlayer.AddForce(Time.deltaTime*_currentSpeed*(Quaternion.Euler (0, _mouseX, 0)*Vector3.back));
         }
         
         if (Input.GetKey(KeyCode.A))
         {
-            //gameObject.transform.Translate(Time.deltaTime*_currentSpeed*Vector3.left);
-            _myPlayer.AddForce(Time.deltaTime*_currentSpeed*(Quaternion.Euler (0, _mouseX, 0)*Vector3.left));
+            gameObject.transform.Translate(Time.deltaTime*_currentSpeed*Vector3.left);
+            //_myPlayer.AddForce(Time.deltaTime*_currentSpeed*(Quaternion.Euler (0, _mouseX, 0)*Vector3.left));
             
 
         }
         
         if (Input.GetKey(KeyCode.D))
         {
-            //gameObject.transform.Translate(Time.deltaTime*_currentSpeed*Vector3.right);
-            _myPlayer.AddForce(Time.deltaTime*_currentSpeed*(Quaternion.Euler (0, _mouseX, 0)*Vector3.right));
+            gameObject.transform.Translate(Time.deltaTime*_currentSpeed*Vector3.right);
+            //_myPlayer.AddForce(Time.deltaTime*_currentSpeed*(Quaternion.Euler (0, _mouseX, 0)*Vector3.right));
         }
         
         if (Input.GetKey(KeyCode.LeftControl))

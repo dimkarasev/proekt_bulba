@@ -1,12 +1,9 @@
-﻿
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] private List<Transform> points;
     [SerializeField] private GameObject player;
 
     private Transform _target;
@@ -19,11 +16,9 @@ public class EnemyAI : MonoBehaviour
     
     void Update()
     {
-        _target = player.transform;Newpoint();
+        _target = player.transform;
+        _enemy.destination = _target.position;
     }
 
-    private void Newpoint()
-    {
-        _target = points[Random.Range(0, points.Count)];
-    }
+
 }
