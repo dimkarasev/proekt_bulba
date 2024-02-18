@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 059782fb563c54b40bc36e12587e20f6, type: 3}
   m_Name: universe_balance
   m_EditorClassIdentifier: 
-  playerDefaultSpeed: 2000
-  playerRunSpeed: 3000
-  playerCrouchSpeed: 1500
-  jumpForce: 600
+  playerDefaultSpeed: 10
+  playerRunSpeed: 15
+  playerCrouchSpeed: 5
+  jumpForce: 1500
   mouseSens: 3
