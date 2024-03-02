@@ -89,7 +89,7 @@ BoxCollider:
   m_GameObject: {fileID: 1896754299}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 267283081256391323}
   - component: {fileID: 4947495834833422184}
   - component: {fileID: 1761642008707596630}
+  - component: {fileID: 6158991798598267057}
   - component: {fileID: 8828471584154159306}
   - component: {fileID: 267283081256391324}
   - component: {fileID: 267283081256391325}
@@ -275,6 +276,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 497356266421018108}
   settings: {fileID: 11400000, guid: 493b5e2963d45d24c8d098682d4ba3d7, type: 2}
+--- !u!114 &6158991798598267057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 267283081256391296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9c4d188f63c5b34b801ba94b2035cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valRectTrans: {fileID: 0}
 --- !u!114 &8828471584154159306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,9 +302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulba: {fileID: 0}
-  cooldown: 0
-  offset: {x: 0, y: 0, z: 0}
-  rotationpoint: {fileID: 0}
+  rotationpoint: {fileID: 3051389935727851363}
 --- !u!33 &267283081256391324
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -516,7 +528,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4348936436113784143}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5875748941023595104}

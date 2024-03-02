@@ -8,7 +8,7 @@ public class EnemyAI : MonoBehaviour
 
     private Transform _target;
     private NavMeshAgent _enemy;
-    private bool _seePlayer;
+    private float _cooldown;
     void Start()
     {
         _enemy = GetComponent<NavMeshAgent>();
@@ -18,6 +18,14 @@ public class EnemyAI : MonoBehaviour
     {
         _target = player.transform;
         _enemy.destination = _target.position;
+
+        if (Vector3.Distance(_target.position, transform.position) < 5 && _cooldown<0)
+        {
+            player.GetComponent<playerhealth>().DealDamage(10);
+            _cooldown = 0.3f;
+        }
+
+        _cooldown -= Time.deltaTime;
     }
 
 

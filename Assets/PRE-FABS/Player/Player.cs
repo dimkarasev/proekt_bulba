@@ -1,4 +1,5 @@
-﻿using DG.Tweening;
+﻿using System;
+using DG.Tweening;
 using UnityEngine;
 
 
@@ -22,32 +23,30 @@ public class  Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         
         if (Input.GetKey(KeyCode.W))
         {
-            gameObject.transform.Translate(Time.deltaTime*_currentSpeed*Vector3.forward);
+            gameObject.transform.Translate(Time.fixedDeltaTime*_currentSpeed*Vector3.forward);
             //_myPlayer.AddForce(Time.deltaTime*_currentSpeed*(Quaternion.Euler (0, _mouseX, 0)*Vector3.forward));
         }
         
         if (Input.GetKey(KeyCode.S))
         {
-            gameObject.transform.Translate(Time.deltaTime*_currentSpeed*Vector3.back);
+            gameObject.transform.Translate(Time.fixedDeltaTime*_currentSpeed*Vector3.back);
             //_myPlayer.AddForce(Time.deltaTime*_currentSpeed*(Quaternion.Euler (0, _mouseX, 0)*Vector3.back));
         }
         
         if (Input.GetKey(KeyCode.A))
         {
-            gameObject.transform.Translate(Time.deltaTime*_currentSpeed*Vector3.left);
+            gameObject.transform.Translate(Time.fixedDeltaTime*_currentSpeed*Vector3.left);
             //_myPlayer.AddForce(Time.deltaTime*_currentSpeed*(Quaternion.Euler (0, _mouseX, 0)*Vector3.left));
-            
-
         }
         
         if (Input.GetKey(KeyCode.D))
         {
-            gameObject.transform.Translate(Time.deltaTime*_currentSpeed*Vector3.right);
+            gameObject.transform.Translate(Time.fixedDeltaTime*_currentSpeed*Vector3.right);
             //_myPlayer.AddForce(Time.deltaTime*_currentSpeed*(Quaternion.Euler (0, _mouseX, 0)*Vector3.right));
         }
         
@@ -69,10 +68,16 @@ public class  Player : MonoBehaviour
             _camera.DOFieldOfView(60, 0.5f);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && !_inAir)
+        /*
+         if (Input.GetKeyDown(KeyCode.Space) && !_inAir)
         {
             _myPlayer.AddForce(settings.jumpForce*Vector3.up);
+            _inAir = true;
         }
+        */
+        
+        
+        
         /*
         if (Input.GetKeyDown(KeyCode.F))
         {
@@ -89,13 +94,20 @@ public class  Player : MonoBehaviour
         }
         */
         
-        _mouseY = Mathf.Clamp(-Input.GetAxis("Mouse Y")*settings.mouseSens + _mouseY, -40, 35);
-        _mouseX = Input.GetAxis("Mouse X")*settings.mouseSens + _mouseX;
         
-        gameObject.transform.rotation = Quaternion.Euler(0, _mouseX, 0);
+        
         
     }
 
+    private void Update()
+    {
+        _mouseX = Input.GetAxis("Mouse X")*settings.mouseSens + _mouseX;
+        gameObject.transform.rotation = Quaternion.Euler(0, _mouseX, 0);
+    }
+
+    
+        
+        
     /*
     public void PushLocalWithPhysics(float velX, float velZ)
     {
@@ -103,13 +115,4 @@ public class  Player : MonoBehaviour
             (Time.deltaTime*_currentSpeed*(Quaternion.Euler(0, _mouseX, 0)*new Vector3(velX, 0, velZ)));
     }
     */
-    private void OnCollisionExit(Collision _)
-    {
-        _inAir = true;
-    }
-
-    private void OnCollisionEnter(Collision _)
-    {
-        _inAir = false;
-    }
 }
