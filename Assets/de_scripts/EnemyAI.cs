@@ -19,7 +19,7 @@ public class EnemyAI : MonoBehaviour
         _target = player.transform;
         _enemy.destination = _target.position;
 
-        if (Vector3.Distance(_target.position, transform.position) < 5 && _cooldown<0)
+        if (Vector3.Distance(_target.position, transform.position) < 15 && _cooldown<0)
         {
             player.GetComponent<playerhealth>().DealDamage(10);
             _cooldown = 0.3f;

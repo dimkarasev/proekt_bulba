@@ -4848,4 +4848,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   power: 2000
   lifetime: 5
-  damage: 50
+  damage: 1
