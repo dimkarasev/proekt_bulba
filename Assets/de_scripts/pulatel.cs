@@ -2,7 +2,7 @@
 
 public class pulatel : MonoBehaviour
 {
-    [SerializeField] private gorachaja_bulba bulba;
+    [SerializeField] private GameObject bulba;
     [SerializeField] private Transform rotationpoint;
     // Update is called once per frame
     void Update()
